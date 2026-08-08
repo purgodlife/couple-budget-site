@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부부 증여세 계산기 | 배우자 증여재산공제 6억원 간이 계산</title>
+<meta name="description" content="최근 10년간 배우자에게 받은 증여 누계액을 입력하면 6억원 공제와 2026년 세율표를 적용한 예상 증여세를 간편하게 계산해드립니다.">
+<meta name="keywords" content="부부 증여세 계산기, 배우자 증여재산공제, 배우자 증여세율, 증여세 6억원 공제">
+<link rel="canonical" href="https://example.com/gift-tax-calculator.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="부부 증여세 계산기 | 배우자 증여재산공제 6억원 간이 계산">
+<meta property="og:description" content="배우자에게 받은 증여 누계액을 입력하면 6억원 공제를 적용한 예상 증여세를 바로 계산합니다.">
+<meta property="og:url" content="https://example.com/gift-tax-calculator.html">
+<meta property="og:locale" content="ko_KR">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" as="style" crossorigin
+  href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <div class="wrap">
+    <div class="page-hero">
+      <h1>배우자 증여세 간이 계산기</h1>
+      <p class="lead">최근 10년간 배우자로부터 받은 증여 재산의 누계액을 입력하면, 6억원 공제와 2026년 세율표를 적용한 예상 증여세를 계산해드립니다.</p>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <!-- 여기에 애드센스 코드 삽입 (상단 배너) -->
+    광고 영역
+  </div>
+
+  <div class="wrap">
+    <section class="panel">
+      <h2 class="section-title">
+        증여 누계액 입력
+        <span class="tip">
+          <button type="button" class="tip-icon">i</button>
+          <span class="tip-bubble">배우자간 증여재산공제는 증여일로부터 소급하여 10년간 합산 6억원까지 적용됩니다. 올해 처음 받은 금액만이 아니라 최근 10년 누계액을 기준으로 입력해야 정확합니다.<span class="tip-note">실제 세액·개별 상황 판단은 세무사 상담이 필요합니다.</span></span>
+        </span>
+      </h2>
+      <div class="field-group">
+        <label class="field-label" for="cumulativeGift">최근 10년간 배우자에게 받은 증여 누계액</label>
+        <div class="input-money"><input id="cumulativeGift" data-money type="text" inputmode="numeric" placeholder="0"></div>
+      </div>
+      <div class="actions-row">
+        <button type="button" class="btn btn-primary" id="calcGiftBtn">계산하기</button>
+        <button type="button" class="btn btn-ghost" id="resetGiftBtn">초기화</button>
+      </div>
+      <p class="storage-note">입력하신 정보는 이 브라우저에만 저장되며 서버로 전송되지 않습니다.</p>
+    </section>
+  </div>
+
+  <div class="ad-slot">
+    <!-- 여기에 애드센스 코드 삽입 (계산기-결과 사이) -->
+    광고 영역
+  </div>
+
+  <div class="wrap">
+    <section class="panel hidden" id="giftResultPanel">
+      <h2 class="section-title">계산 결과</h2>
+
+      <div class="result-item">
+        <div class="label">과세표준 (증여 누계액 − 6억원 공제)</div>
+        <div class="amount" id="taxBaseAmount">0</div>
+      </div>
+      <div class="result-item">
+        <div class="label">적용 세율 / 누진공제</div>
+        <div class="amount" id="rateInfo" style="font-size:1.1rem;">-</div>
+      </div>
+      <div class="result-item">
+        <div class="label">산출세액</div>
+        <div class="amount" id="calculatedTaxAmount">0</div>
+      </div>
+      <div class="result-item">
+        <div class="label">
+          신고세액공제 3% (참고)
+          <span class="tip">
+            <button type="button" class="tip-icon">i</button>
+            <span class="tip-bubble">증여받은 달의 말일부터 3개월 이내에 증여세를 신고하면 산출세액의 3%를 세액공제 받을 수 있어요. 아래 금액은 참고용 추정치입니다.<span class="tip-note">실제 세액·개별 상황 판단은 세무사 상담이 필요합니다.</span></span>
+          </span>
+        </div>
+        <div class="amount" id="reportCreditAmount">0</div>
+      </div>
+      <div class="result-item">
+        <div class="label">신고 시 예상 납부세액 (참고)</div>
+        <div class="amount" id="finalTaxAmount">0</div>
+      </div>
+
+      <div class="alert alert-warning" style="margin-top:18px;">
+        이 결과는 간이 계산이며 실제 신고 세액과 다를 수 있습니다. 정확한 세액은 국세청 홈택스 모의계산 또는 세무사 상담을 통해 확인하세요.
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="panel">
+      <h2 class="section-title">2026년 증여세 세율표</h2>
+      <table class="rate-table">
+        <thead>
+          <tr><th>과세표준</th><th>세율</th><th>누진공제</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1억원 이하</td><td>10%</td><td>없음</td></tr>
+          <tr><td>1억원 초과 ~ 5억원 이하</td><td>20%</td><td>1,000만원</td></tr>
+          <tr><td>5억원 초과 ~ 10억원 이하</td><td>30%</td><td>6,000만원</td></tr>
+          <tr><td>10억원 초과 ~ 30억원 이하</td><td>40%</td><td>1억 6,000만원</td></tr>
+          <tr><td>30억원 초과</td><td>50%</td><td>4억 6,000만원</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.85rem; color:var(--color-text-muted);">더 자세한 공제 한도와 계산 방식은 <a href="guide/spouse-gift-tax-deduction.html">배우자 증여재산공제 6억원 완벽정리</a> 가이드를 참고하세요.</p>
+    </section>
+  </div>
+</main>
+
+<div class="ad-slot">
+  <!-- 여기에 애드센스 코드 삽입 (하단) -->
+  광고 영역
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/common.js"></script>
+<script src="js/gift-tax.js"></script>
+</body>
+</html>
