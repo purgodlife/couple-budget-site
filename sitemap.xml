@@ -41,6 +41,41 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://couple-budget-site-beta.vercel.app/guide/merge-or-separate-accounts.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/guide/pension-health-insurance-dependent.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/guide/year-end-tax-dependents.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/guide/isa-couple-account.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/guide/isa-2026-tax-reform.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/guide/pension-tax-deduction-couple.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/guide/isa-to-pension-transfer.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://couple-budget-site-beta.vercel.app/disclaimer.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
