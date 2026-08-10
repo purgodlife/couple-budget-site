@@ -11,7 +11,10 @@
     { href: base + '/index.html', label: '생활비 계산기' },
     { href: base + '/gift-tax-calculator.html', label: '증여세 계산기' },
     { href: base + '/guide/index.html', label: '세금 가이드' },
-    { href: base + '/disclaimer.html', label: '면책 고지' }
+    { href: base + '/about.html', label: '소개' },
+    { href: base + '/disclaimer.html', label: '면책 고지' },
+    { href: base + '/contact.html', label: '문의하기' },
+    { href: base + '/privacy-policy.html', label: '개인정보처리방침' }
   ];
 
   function isActive(href) {
@@ -48,7 +51,10 @@
           '<a href="' + base + '/index.html">생활비 계산기</a>' +
           '<a href="' + base + '/gift-tax-calculator.html">증여세 계산기</a>' +
           '<a href="' + base + '/guide/index.html">세금 가이드</a>' +
+          '<a href="' + base + '/about.html">소개</a>' +
           '<a href="' + base + '/disclaimer.html">면책 고지</a>' +
+          '<a href="' + base + '/contact.html">문의하기</a>' +
+          '<a href="' + base + '/privacy-policy.html">개인정보처리방침</a>' +
         '</nav>' +
         '<p>본 사이트의 계산 결과는 일반적인 정보 제공을 목적으로 하며, 법률·세무 자문을 대체하지 않습니다.</p>' +
         '<p>&copy; ' + year + ' 부부가계결산. All rights reserved.</p>' +

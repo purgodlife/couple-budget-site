@@ -76,7 +76,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://couple-budget-site-beta.vercel.app/about.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://couple-budget-site-beta.vercel.app/disclaimer.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://couple-budget-site-beta.vercel.app/privacy-policy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
