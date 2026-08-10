@@ -1,2 +1,1 @@
-# 구글 애드센스 퍼블리셔 ID 발급 후 아래 형식으로 채워주세요.
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-3190356343713813, DIRECT, f08c47fec0942fa0
