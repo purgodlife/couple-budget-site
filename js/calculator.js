@@ -201,8 +201,10 @@
     var alertBox = el('validationAlert');
     if (r.warnings.length) {
       alertBox.innerHTML = '<div class="alert alert-danger">' + r.warnings.join('<br>') + '</div>';
+      el('resultSummary').classList.add('hidden');
     } else {
       alertBox.innerHTML = '';
+      el('resultSummary').classList.remove('hidden');
     }
 
     el('resultPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
